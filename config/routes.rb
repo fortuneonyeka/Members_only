@@ -4,6 +4,4 @@ Rails.application.routes.draw do
   root to: "posts#index"
 
   resources :posts, only: [:index, :new, :create, :show]
-  get 'sign_in', to: 'devise/sessions#new', as: 'sign_in'
 end
-

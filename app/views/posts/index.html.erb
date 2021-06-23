@@ -3,7 +3,10 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= post.title %>
+      <%= link_to post.title, post %>
+      <% if user_signed_in? %>
+        by <%= post.user.username %>
+      <% end %>
       <span class="post-date">
         <%= post.created_at.to_date %>
       </span>
