@@ -15,12 +15,18 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <% if user_signed_in?  %>
-  <div><%= link_to 'Log Out', destroy_user_session_path, method: 'delete', class:"log" %></div>
-  <% else %>
-  <div><%= link_to 'Sign Up', new_user_registration_path, class:"log" %></div>
-  <div><%= link_to 'Log In', new_user_session_path, class:"log" %></div>
-  <% end %>
+  <div class="log-bar">
+    <ul class="nav-list">
+      <% if user_signed_in?  %>
+        <li><%= current_user.username %></li>
+        <li><%= link_to 'Log Out', destroy_user_session_path,
+                 method: 'delete', class:"log" %></li>
+      <% else %>
+        <li><%= link_to 'Sign Up', new_user_registration_path, class:"log" %></li>
+        <li><%= link_to 'Log In', new_user_session_path, class:"log" %></li>
+      <% end %>
+    </ul>
+  </div>
   <main>
     <%= yield %>
   </main>

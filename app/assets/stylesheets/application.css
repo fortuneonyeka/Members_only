@@ -13,40 +13,85 @@
  *= require_tree .
  *= require_self
  */
-body{
-  color:gainsboro;
+body {
+  color: gainsboro;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: black;
 }
-a{
-  color:rgba(0, 188, 245, 0.693);
+
+a {
+  color: rgba(28, 233, 97, 0.618);
   text-decoration: none;
 }
 
-main{
-  width: 60%;
-  margin: auto;
+p {
+  margin: 5px 0;
 }
-.field{
+
+main {
+  width: 50%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.text-field {
   background-color: black;
 }
-.area{
-  background-color:black;
-  color: gainsboro;
-  font-size: medium;
-}
-.label{
+
+.label {
   color: gainsboro;
 }
-.button{
-  font-size: larger;
-  color:gainsboro;
-  padding: 7px 45px;
+
+.button {
+  font-size: 16px;
+  color: gainsboro;
+  padding: 3px 45px;
   background-color: rgba(28, 233, 97, 0.618);
 }
-.title{
+
+.title {
   color: gainsboro;
 }
-input{
+
+.actions {
+  margin-bottom: 20px;
+}
+
+input {
   background-color: black;
   color: gainsboro;
-  border: 2px white solid;
+  border: 1px grey solid;
+  font-size: 16px;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+.nav-list {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  margin-top: 0;
+  display: flex;
+}
+
+.nav-list > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.author {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#error_explanation {
+  color: darkred;
+}
+
+#error_explanation > h2 {
+  margin-bottom: 10px;
 }
