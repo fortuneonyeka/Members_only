@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+body{
+  color:gainsboro;
+}
+a{
+  color:rgba(0, 188, 245, 0.693);
+  text-decoration: none;
+}
+
+main{
+  width: 60%;
+  margin: auto;
+}
+.field{
+  background-color: black;
+}
+.area{
+  background-color:black;
+  color: gainsboro;
+  font-size: medium;
+}
+.label{
+  color: gainsboro;
+}
+.button{
+  font-size: larger;
+  color:gainsboro;
+  padding: 7px 45px;
+  background-color: rgba(28, 233, 97, 0.618);
+}
+.title{
+  color: gainsboro;
+}
+input{
+  background-color: black;
+  color: gainsboro;
+  border: 2px white solid;
+}

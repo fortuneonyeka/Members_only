@@ -2,15 +2,15 @@
 
 
 <%= form_with model: @post do |form|%>
-  <%= form.label :title, "title" %><br>
-  <% @post.errors.full_messages_for(:title).each do |message| %>
-    <div><%= message %></div>
-  <% end %>
-  <%= form.text_field :title, placeholder: "Enter your title here" %><br>
-  <%= form.label :body, "body" %><br>
-  <% @post.errors.full_messages_for(:body).each do |message| %>
-    <div><%= message %></div>
-  <% end %>
-  <%= form.text_area :body, size: "70x5" %><br>
-  <%= form.submit "submit"%>
+<%= form.label :title, "title", class:"label" %><br>
+<% @post.errors.full_messages_for(:title).each do |message| %>
+<div><%= message %></div>
+<% end %>
+<%= form.text_field :title, placeholder: "Enter your title here",class:"field"%><br>
+<%= form.label :body, "body" %><br>
+<% @post.errors.full_messages_for(:body).each do |message| %>
+<div><%= message %></div>
+<% end %>
+<%= form.text_area :body, size: "70x5",class:"area"%><br>
+<%= form.submit "submit", class:"button"%>
 <%end%>
