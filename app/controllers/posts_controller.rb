@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[create new]
+  before_action :authorize, only: %i[create new]
 
   def index
     @posts = Post.all

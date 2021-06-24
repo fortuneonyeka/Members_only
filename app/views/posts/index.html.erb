@@ -2,16 +2,16 @@
 
 <ul>
   <% @posts.each do |post| %>
-  <li>
-    <p><%=  link_to post.title, post, class:"link" %>
-    <% if user_signed_in? %>
-      <span class="author">by <%= post.user.username %></span>
-    <% end %>
-    </p>
-    <p class="post-date">
-      <%= post.created_at.to_date %>
-    </p>
-  </li>
+    <li>
+      <p><%=  link_to post.title, post, class:"link" %>
+        <% if authenticated_user? %>
+          <span class="author">by <%= post.user.username %></span>
+        <% end %>
+      </p>
+      <p class="post-date">
+        <%= post.created_at.to_date %>
+      </p>
+    </li>
   <% end %>
 </ul>
 

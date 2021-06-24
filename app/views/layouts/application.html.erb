@@ -19,11 +19,11 @@
     <ul class="nav-list">
       <% if user_signed_in?  %>
         <li><%= current_user.username %></li>
-        <li><%= link_to 'Log Out', destroy_user_session_path,
+        <li><%= link_to 'Log Out', log_out_path,
                  method: 'delete', class:"log" %></li>
       <% else %>
-        <li><%= link_to 'Sign Up', new_user_registration_path, class:"log" %></li>
-        <li><%= link_to 'Log In', new_user_session_path, class:"log" %></li>
+        <li><%= link_to 'Sign Up', sign_up_path, class:"log" %></li>
+        <li><%= link_to 'Log In', sign_in_path, class:"log" %></li>
       <% end %>
     </ul>
   </div>
