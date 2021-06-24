@@ -1,3 +1,21 @@
-// Place all the styles related to the Posts controller here.
+/* // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/ */
+/* .post-content{
+  white-space: pre-wrap;
+  font-family: verdana,Arial, Helvetica, sans-serif;
+  font-size: larger;
+} */
+/* body{
+background-color: black;
+font-size: larger;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+  line-height: 1.6em;
+}
