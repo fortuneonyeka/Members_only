@@ -4,12 +4,15 @@ Simple rails blog app showcasing authorization and authentication functionality.
 
 > This project was originally proposed by The Odin Project [link](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/authentication).
 
+![Screenshot](assets/index-capture.png)
+![Screenshot](assets/post-capture.png)
+![Screenshot](assets/fail-sign-up-capture.png)
+
 ## Built With
 
 - Ruby 3.0.1
 - Rails
 - sqlite3
-
 
 ## Getting Started
 
