@@ -1,0 +1,18 @@
+<h1>Posts</h1>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <p><%=  link_to post.title, post, class:"link" %>
+        <% if authenticated_user? %>
+          <span class="author">by <%= post.user.username %></span>
+        <% end %>
+      </p>
+      <p class="post-date">
+        <%= post.created_at.to_date %>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Post', new_post_path, class: "plain-link new-link" %>
