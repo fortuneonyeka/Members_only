@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MembersOnly</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>MembersOnly</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div class="log-bar">
+    <ul class="nav-list">
+      <% if user_signed_in?  %>
+        <li><%= current_user.username %></li>
+        <li><%= link_to 'Log Out', log_out_path,
+                 method: 'delete', class:"log" %></li>
+      <% else %>
+        <li><%= link_to 'Sign Up', sign_up_path, class:"log" %></li>
+        <li><%= link_to 'Log In', sign_in_path, class:"log" %></li>
+      <% end %>
+    </ul>
+  </div>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+</body>
+
 </html>
